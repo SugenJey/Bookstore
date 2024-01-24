@@ -1,0 +1,10 @@
+Monopoly
+12.0
+Book
+10.0
+Bib
+10.0
+Percy
+10.0
+Jackson
+10.0

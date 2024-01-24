@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="123.0" prefWidth="187.0" style="-fx-background-color: #72602f;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Scenes.ScreenController">
+   <children>
+      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#72602f" height="189.0" layoutX="-4.0" layoutY="-3.0" stroke="#72602f" strokeLineCap="ROUND" strokeLineJoin="BEVEL" width="376.0" />
+      <Rectangle arcHeight="4.0" arcWidth="4.0" fill="WHITE" height="168.0" layoutX="8.0" layoutY="9.0" smooth="false" stroke="#72602f" strokeType="INSIDE" width="356.0" />
+      <Label alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="20.0" layoutX="87.0" layoutY="6.0" prefHeight="39.0" prefWidth="279.0" style="-fx-alignment: center;" text="Welcome to the BookStore App">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="17.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+         <graphic>
+            <ImageView fx:id="eye" fitHeight="20.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+               <image>
+                  <Image url="@../icons/read-book-icon.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+            </ImageView>
+         </graphic>
+      </Label>
+      <Text layoutX="34.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username:">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="34.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="tfUsername" layoutX="99.0" layoutY="54.0" onAction="#VerifyUser" prefHeight="25.0" prefWidth="217.0" />
+      <TextField fx:id="ViewPassword" layoutX="99.0" layoutY="92.0" onAction="#VerifyUser" prefHeight="25.0" prefWidth="217.0" />
+      <PasswordField fx:id="tfPassword" layoutX="99.0" layoutY="92.0" onAction="#VerifyUser" prefHeight="25.0" prefWidth="217.0" />
+      <Button layoutX="131.0" layoutY="145.0" mnemonicParsing="false" onAction="#VerifyUser" prefHeight="25.0" prefWidth="110.0" text="Login" />
+      <CheckBox fx:id="pass_toggle" alignment="CENTER" contentDisplay="BOTTOM" layoutX="318.0" layoutY="91.0" mnemonicParsing="false" onAction="#ShowPassword" prefHeight="27.0" prefWidth="44.0">
+         <font>
+            <Font name="Times New Roman" size="12.0" />
+         </font>
+      </CheckBox>
+      <Text fx:id="IncorPass" fill="#ef0000" layoutX="122.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER">
+         <font>
+            <Font name="Times New Roman" size="10.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
